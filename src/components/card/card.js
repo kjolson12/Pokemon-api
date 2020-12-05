@@ -14,7 +14,11 @@ function Card({ pokemon }) {
             <div className="Card__types">
                 {pokemon.types.map(type => {
                     return (
-                        <div className="Card__type" style={{ backgroundColor: typeColors[type.type.name]}}>
+                        <div
+                            className="Card__type"
+                            style={{ backgroundColor: typeColors[type.type.name]}}
+                            key={type.type.name}
+                        >
                             {type.type.name}
                         </div>
                     )
